@@ -1,4 +1,4 @@
-case_vide = " "
+case_vide = " " #Ici on crée un carré vide
 
 plateau = [case_vide for i in range(9)]
 
