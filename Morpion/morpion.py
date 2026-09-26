@@ -1,6 +1,6 @@
-case_vide = " " #Ici on crée un carré vide
+case_vide = " " #Ici on crée une variable qui repésente une case 
 
-plateau = [case_vide for i in range(9)]
+plateau = [case_vide for i in range(9)] #Suite de 0 a 8 de case vide
 
 symboles = ("❌", "⭕")
 placeholder = ("1️⃣ ", "2️⃣ ", "3️⃣ ", "4️⃣ ", "5️⃣ ", "6️⃣ ", "7️⃣ ", "8️⃣ ", "9️⃣ ")
