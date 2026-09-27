@@ -11,19 +11,19 @@ def afficher_plateau(): #def: sert a créer, un bloc de code ou l'on donne un no
     print(" ----+----+----") #print affiche du texte a l'écran, ici il sera en haut de la grille 
     for i in range(9): #boucle for qui répète le code en dessous 9 fois et sur chaque tour la variable i prend la valeur suivante
         print("|", plateau[i] if plateau[i] != case_vide else placeholder[i], end=" ") #ici on lit "affiche plateau[i] si la case n'est pas vide (!= veut dire différent de) sinon placeholder[i]"
-        if i % 3 == 2: #si la case contient x ou o on affiche, si c'est vide on affiche les numéros
+        if i % 3 == 2: #si la case contient x ou o on affiche, si c'est vide on affiche les numéros 
             print("|")
             print(" ----+----+----")
 
 
-while True:
-    afficher_plateau()
-    choix_joueur = 0
+while True: #boucle while, répète le contenu tant qu'une condition est vraie, sur true la condition est toujours vraie donc la boucle tourne indéfiniment jusqu'a break pour sortir de la boulc
+    afficher_plateau() #affiche la grille   
+    choix_joueur = 0 #on met un joueur a 0 pour forcer la boucle pour forcer la boucle suivante à demander un nombre au moins une fois
 
-    while choix_joueur < 1 or choix_joueur > 9 or plateau[choix_joueur - 1] != case_vide:
-        choix_joueur = int(input("Entrez une case entre 1 et 9 : "))
+    while choix_joueur < 1 or choix_joueur > 9 or plateau[choix_joueur - 1] != case_vide: #tant que le choix est mauvais on redemande dans ce cas ou le nombre et plus petit que 1 ou plus grand que 9 ou case deja occupée
+        choix_joueur = int(input("Entrez une case entre 1 et 9 : ")) #affiche le message et attend que le joeur tape quelque chose ce qu'il tape sera toujours du texte (int) pour la conversion en nombre entier
 
-    plateau[choix_joueur - 1] = joueur
+    plateau[choix_joueur - 1] = joueur #le joueur tape entre 1 et 9 et la liste est de 0 à 8 il faut enlever 1 pour être sur la bonne case, et on remplace la case vide par le symbole du joueur actuel
 
     if case_vide != plateau[0] == plateau[1] == plateau[2] \
     or case_vide != plateau[3] == plateau[4] == plateau[5] \
