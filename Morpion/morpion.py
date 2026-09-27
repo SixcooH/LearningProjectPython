@@ -37,4 +37,9 @@ while True: #boucle while, répète le contenu tant qu'une condition est vraie, 
         afficher_plateau()
         break
 
-    joueur = symboles[1] if joueur == symboles[0] else symboles[0]
+    joueur = symboles[1] if joueur == symboles[0] else symboles[0] #si le joueur actuel est x alors le joueur devient o et ainsi de suite
+
+    if case_vide not in plateau: #condition dans le cas ou il y a match nul, not in plateau veut si il y a plus de case vide
+        print("Match nul !")
+        afficher_plateau()
+        break
