@@ -1,17 +1,17 @@
-case_vide = " " #Ici on crée une variable qui repésente une case 
+case_vide = " " #ici on crée une variable qui repésente une case 
 
-plateau = [case_vide for i in range(9)] #Suite de 0 a 8 de case vide
+plateau = [case_vide for i in range(9)] #suite de 0 a 8 de case vide
 
-symboles = ("❌", "⭕")
-placeholder = ("1️⃣ ", "2️⃣ ", "3️⃣ ", "4️⃣ ", "5️⃣ ", "6️⃣ ", "7️⃣ ", "8️⃣ ", "9️⃣ ")
+symboles = ("❌", "⭕") #contient les pions des deux joueurs 
+placeholder = ("1️⃣ ", "2️⃣ ", "3️⃣ ", "4️⃣ ", "5️⃣ ", "6️⃣ ", "7️⃣ ", "8️⃣ ", "9️⃣ ") #contient les chiffres affichés dans les cases vides, pour savoir quel numéro taper
 
-joueur = symboles[0]
+joueur = symboles[0]#position 0
 
-def afficher_plateau():
-    print(" ----+----+----")
-    for i in range(9):
-        print("|", plateau[i] if plateau[i] != case_vide else placeholder[i], end=" ")
-        if i % 3 == 2:
+def afficher_plateau(): #def: sert a créer, un bloc de code ou l'on donne un nom pour le réutiliser 
+    print(" ----+----+----") #print affiche du texte a l'écran, ici il sera en haut de la grille 
+    for i in range(9): #boucle for qui répète le code en dessous 9 fois et sur chaque tour la variable i prend la valeur suivante
+        print("|", plateau[i] if plateau[i] != case_vide else placeholder[i], end=" ") #ici on lit "affiche plateau[i] si la case n'est pas vide (!= veut dire différent de) sinon placeholder[i]"
+        if i % 3 == 2: #si la case contient x ou o on affiche, si c'est vide on affiche les numéros
             print("|")
             print(" ----+----+----")
 
