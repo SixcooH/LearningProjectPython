@@ -1,12 +1,13 @@
-import random
-import string
+import random #module python pour tirer au hasard (tirer un élément au sort, mélanger une liste..)
+import string #module pyhton contient des listes de caractères déja écrites 
+#on accède au contenu via random. ou string.
 
-def generer_mot_de_passe(longueur):
-    if longueur < 4:
+def generer_mot_de_passe(longueur): #fonction qui tient un paramètre longueur qui contiendra la valeur du nombre de caractères dans le mdp
+    if longueur < 4: #4 caractères minimum sinon avertissement print
         print("La longueur doit être d'au moins 4.")
-        return ""
+        return "" #il arrête la fonction immédiatement et renvoie vide
 
-    minuscule = random.choice(string.ascii_lowercase)
+    minuscule = random.choice(string.ascii_lowercase) #appel les modules 
     majuscule = random.choice(string.ascii_uppercase)
     chiffre = random.choice(string.digits)
     symbole = random.choice(string.punctuation)
