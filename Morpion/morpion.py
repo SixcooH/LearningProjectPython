@@ -25,6 +25,7 @@ while True: #boucle while, répète le contenu tant qu'une condition est vraie, 
 
     plateau[choix_joueur - 1] = joueur #le joueur tape entre 1 et 9 et la liste est de 0 à 8 il faut enlever 1 pour être sur la bonne case, et on remplace la case vide par le symbole du joueur actuel
 
+#verifie si quelqu'un a gagner la \ sert a dire de retourner a la ligne pour que le tableau soit bien lisible  
     if case_vide != plateau[0] == plateau[1] == plateau[2] \
     or case_vide != plateau[3] == plateau[4] == plateau[5] \
     or case_vide != plateau[6] == plateau[7] == plateau[8] \
@@ -33,9 +34,9 @@ while True: #boucle while, répète le contenu tant qu'une condition est vraie, 
     or case_vide != plateau[2] == plateau[5] == plateau[8] \
     or case_vide != plateau[0] == plateau[4] == plateau[8] \
     or case_vide != plateau[2] == plateau[4] == plateau[6]:
-        print("Le joueur", joueur, "gagne la partie !")
+        print("Le joueur", joueur, "gagne la partie !") #si l'une d'elle est vrai le joueur gagne la partie 
         afficher_plateau()
-        break
+        break  #arrete la boucle while True
 
     joueur = symboles[1] if joueur == symboles[0] else symboles[0] #si le joueur actuel est x alors le joueur devient o et ainsi de suite
 
